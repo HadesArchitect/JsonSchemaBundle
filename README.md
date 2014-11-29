@@ -2,7 +2,7 @@
 
 Symfony bundle for Justin Rainbow's JsonSchema library: https://github.com/justinrainbow/json-schema. Offers symfony services instead of classic-style $validator = new Validator();
 
-**WARNING! Bundle now in development, don't use in production environment!**
+**WARNING! Bundle now in development, not for use in production environment!**
 
 ```
 A PHP Implementation for validating `JSON` Structures against a given `Schema`.
@@ -13,8 +13,23 @@ See http://json-schema.org for more details.
 
 Install through composer: 
 
+*First step: require bundle*
 ```
 composer require hadesarchitect/json-schema-bundle dev-master
+```
+
+*Second step: enable bundle*
+```php
+<?php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new HadesArchitect\JsonSchemaBundle\JsonSchemaBundle(),
+    );
+}
 ```
 
 ## Usage
@@ -26,7 +41,7 @@ composer require hadesarchitect/json-schema-bundle dev-master
 // Get the schema and data as objects
 
 $retriever = $this->get('json_schema.uri_retriever');
-$schema = $retriever->retrieve('file://' . realpath('schema.json'));
+$schema = $retriever->retrieve('http://json-schema.org/geo'));
 ```
 
 ### Available services
