@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "justinrainbow/json-schema": "<2"
+        "justinrainbow/json-schema": "<2",
+        "symfony/framework-bundle": "~2.3"
     },
     "autoload" : {
         "psr-0" : {
