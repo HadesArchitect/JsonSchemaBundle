@@ -1,5 +1,6 @@
 {
     "name": "hadesarchitect/json-schema-bundle",
+    "type": "symfony-bundle",
     "description": "Symfony2 bundle for Justin Rainbow's json-schema library.",
     "license": "MIT",
     "authors": [
@@ -10,5 +11,11 @@
     ],
     "require": {
         "justinrainbow/json-schema": "<2"
-    }
+    },
+    "autoload" : {
+        "psr-0" : {
+            "HadesArchitect\\JsonSchemaBundle" : ""
+        }
+    },
+    "target-dir" : "HadesArchitect/JsonSchemaBundle"
 }
