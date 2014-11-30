@@ -1,4 +1,7 @@
 parameters:
+    json_schema.validator.class: JsonSchema\Validator
+    json_schema.validator.service.class: HadesArchitect\JsonSchemaBundle\Validator\ValidatorService
+
     json_schema.uri_resolver.class: JsonSchema\Uri\UriResolver
     json_schema.uri_resolver.service.class: HadesArchitect\JsonSchemaBundle\Uri\UriResolverService
 
@@ -6,6 +9,11 @@ parameters:
     json_schema.uri_retriever.service.class: HadesArchitect\JsonSchemaBundle\Uri\UriRetrieverService
 
 services:
+
+    json_schema.validator:
+        class: %json_schema.validator.service.class%
+        arguments: [%json_schema.validator.class%]
+
     json_schema.uri_resolver:
         class: %json_schema.uri_resolver.service.class%
         arguments: [%json_schema.uri_resolver.class%]
