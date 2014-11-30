@@ -2,27 +2,25 @@
 
 namespace HadesArchitect\JsonSchemaBundle\Uri;
 
-use JsonSchema\Exception\UriResolverException;
 use JsonSchema\Uri\UriResolver as BaseResolver;
 
-class UriResolver
+class UriResolverService implements UriResolverServiceInterface
 {
     /**
      * @var BaseResolver
      */
     protected $resolver;
 
+    /**
+     * @inheritdoc
+     */
     public function __construct($resolverClass)
     {
         $this->resolver = new $resolverClass;
     }
 
     /**
-     * Parses a URI into five main components
-     *
-     * @param string $uri
-     *
-     * @return array
+     * @inheritdoc
      */
     public function parse($uri)
     {
@@ -30,11 +28,7 @@ class UriResolver
     }
 
     /**
-     * Builds a URI based on an array with the main components
-     *
-     * @param array $components
-     *
-     * @return string
+     * @inheritdoc
      */
     public function generate(array $components)
     {
@@ -42,12 +36,7 @@ class UriResolver
     }
 
     /**
-     * Resolves a URI
-     *
-     * @param string $uri Absolute or relative
-     * @param string $baseUri Optional base URI
-     *
-     * @return string Absolute URI
+     * @inheritdoc
      */
     public function resolve($uri, $baseUri = null)
     {
@@ -55,9 +44,7 @@ class UriResolver
     }
 
     /**
-     * @param string $uri
-     *
-     * @return boolean
+     * @inheritdoc
      */
     public function isValid($uri)
     {
@@ -65,14 +52,7 @@ class UriResolver
     }
 
     /**
-     * Tries to glue a relative path onto an absolute one
-     *
-     * @param string $relativePath
-     * @param string $basePath
-     *
-     * @throws UriResolverException
-     *
-     * @return string Merged path
+     * @inheritdoc
      */
     public function combineRelativePathWithBasePath($relativePath, $basePath)
     {

@@ -1,15 +1,15 @@
 parameters:
-    json_schema.real_uri_resolver.class: JsonSchema\Uri\UriResolver
-    json_schema.uri_resolver.class: HadesArchitect\JsonSchemaBundle\Uri\UriResolver
+    json_schema.uri_resolver.class: JsonSchema\Uri\UriResolver
+    json_schema.uri_resolver.service.class: HadesArchitect\JsonSchemaBundle\Uri\UriResolverService
 
-    json_schema.real_uri_retriever.class: JsonSchema\Uri\UriRetriever
-    json_schema.uri_retriever.class: HadesArchitect\JsonSchemaBundle\Uri\UriRetriever
+    json_schema.uri_retriever.class: JsonSchema\Uri\UriRetriever
+    json_schema.uri_retriever.service.class: HadesArchitect\JsonSchemaBundle\Uri\UriRetrieverService
 
 services:
     json_schema.uri_resolver:
-        class: %json_schema.uri_resolver.class%
-        arguments: [%json_schema.real_uri_resolver.class%]
+        class: %json_schema.uri_resolver.service.class%
+        arguments: [%json_schema.uri_resolver.class%]
 
     json_schema.uri_retriever:
-        class: %json_schema.uri_retriever.class%
-        arguments: [%json_schema.real_uri_retriever.class%]
+        class: %json_schema.uri_retriever.service.class%
+        arguments: [%json_schema.uri_retriever.class%]

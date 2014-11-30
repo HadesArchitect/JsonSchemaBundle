@@ -38,8 +38,8 @@ $schema = $retriever->retrieve('file://' . realpath('schema.json'));
 
 Parameters which you could override in your parameters.yml:
 
-* json_schema.real_uri_resolver.class - *real resolver class*
-* json_schema.uri_resolver.class - *resolver service class*
+* json_schema.uri_resolver.class - *real resolver class*
+* json_schema.uri_resolver.service.class - *resolver service class*
 * 
-* json_schema.real_uri_retriever.class - *real retriever class*
-* json_schema.uri_retriever.class - *retriever service class*
+* json_schema.uri_retriever.class - *real retriever class*
+* json_schema.uri_retriever.service.class - *retriever service class*
