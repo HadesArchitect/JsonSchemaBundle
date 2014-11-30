@@ -92,6 +92,7 @@ if (!$result) {
         // the property country-name is required
         echo $error->getViolation();
     }
+    // Errors will be kept in validator till next validation (check or isValid)
 }
 ```
 
@@ -108,9 +109,7 @@ Parameters which you could override in your parameters.yml:
 
 * json_schema.validator.class - *real validator class*
 * json_schema.validator.service.class - *validator service class*
-
 * json_schema.uri_resolver.class - *real resolver class*
 * json_schema.uri_resolver.service.class - *resolver service class*
-* 
 * json_schema.uri_retriever.class - *real retriever class*
 * json_schema.uri_retriever.service.class - *retriever service class*
