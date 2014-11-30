@@ -21,10 +21,10 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
         $this->schema->title = "Product";
         $this->schema->description = "A product from Acme catalog";
         $this->schema->properties = array();
-        $this->schema->properties['id'] = (object) ["type"=>"integer"];
-        $this->schema->properties['name'] = (object) ["type"=>"string"];
-        $this->schema->properties['description'] = (object) ["type"=>"string"];
-        $this->schema->required = ['id', 'name'];
+        $this->schema->properties['id'] = (object) array("type"=>"integer");
+        $this->schema->properties['name'] = (object) array("type"=>"string");
+        $this->schema->properties['description'] = (object) array("type"=>"string");
+        $this->schema->required = array('id', 'name');
     }
 
     public function testIsValidSuccess()
