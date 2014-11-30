@@ -18,7 +18,7 @@ class ValidatorService implements ValidatorServiceInterface
     /**
      * @var ErrorInterface[]
      */
-    protected $errors = [];
+    protected $errors = array();
 
     public function __construct($validatorClass)
     {
@@ -57,7 +57,7 @@ class ValidatorService implements ValidatorServiceInterface
 
     protected function convertErrors()
     {
-        $this->errors = [];
+        $this->errors = array();
 
         foreach ($this->validator->getErrors() as $error) {
             $this->errors[] = new Error($error['property'], $error['message']);
@@ -66,7 +66,7 @@ class ValidatorService implements ValidatorServiceInterface
 
     protected function reset()
     {
-        $this->errors = [];
+        $this->errors = array();
         $this->validator->reset();
     }
 } 

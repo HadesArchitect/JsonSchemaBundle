@@ -9,7 +9,7 @@ class ViolationException extends JsonSchemaException
     /**
      * @var Error[]
      */
-    protected $errors = [];
+    protected $errors = array();
 
     /**
      * @param Error[] $errors

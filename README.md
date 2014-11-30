@@ -56,7 +56,7 @@ $validator = $this->get('json_schema.validator');
 $schema = $this->get('json_schema.uri_retriever')->retrieve('http://json-schema.org/address');
 
 // Prepare object
-$object = [];
+$object = array();
 $object['country-name'] = 'Some country';
 $object['region']       = 'Some region';
 $object['locality']     = 'Some locality';

@@ -20,7 +20,7 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
         $this->schema->schema = "http://json-schema.org/draft-04/schema#";
         $this->schema->title = "Product";
         $this->schema->description = "A product from Acme catalog";
-        $this->schema->properties = [];
+        $this->schema->properties = array();
         $this->schema->properties['id'] = (object) ["type"=>"integer"];
         $this->schema->properties['name'] = (object) ["type"=>"string"];
         $this->schema->properties['description'] = (object) ["type"=>"string"];
@@ -46,10 +46,10 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($this->validator->isValid($invalidObject, $this->schema));
         $this->assertNotEmpty($this->validator->getErrors());
 
-        $error = $this->validator->getErrors()[0];
+        $errors = $this->validator->getErrors();
 
-        $this->assertEquals('the property id is required', $error->getViolation());
-        $this->assertEquals('The property id is required', "{$error}");
+        $this->assertEquals('the property id is required', $errors[0]->getViolation());
+        $this->assertEquals('The property id is required', "{$errors[0]}");
 
         $invalidObject->id = 42;
 
@@ -78,10 +78,10 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
         $this->validator->check($invalidObject, $this->schema);
         $this->assertNotEmpty($this->validator->getErrors());
 
-        $error = $this->validator->getErrors()[0];
+        $errors = $this->validator->getErrors();
 
-        $this->assertEquals('the property id is required', $error->getViolation());
-        $this->assertEquals('the property id is required', "{$error}");
+        $this->assertEquals('the property id is required', $errors[0]->getViolation());
+        $this->assertEquals('the property id is required', "{$errors[0]}");
 
         $invalidObject->id = 42;
 
