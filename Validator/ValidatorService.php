@@ -6,11 +6,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace HadesArchitect\JsonSchemaBundle\Validator;
 
 use HadesArchitect\JsonSchemaBundle\Error\Error;
 use HadesArchitect\JsonSchemaBundle\Error\ErrorInterface;
-use HadesArchitect\JsonSchemaBundle\Exception\JsonSchemaException;
 use HadesArchitect\JsonSchemaBundle\Exception\ViolationException;
 use JsonSchema\Validator as BaseValidator;
 
