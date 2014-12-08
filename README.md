@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/HadesArchitect/JsonSchemaBundle.svg?branch=master)](https://travis-ci.org/HadesArchitect/JsonSchemaBundle)
 [![Latest Stable Version](https://poser.pugx.org/hadesarchitect/json-schema-bundle/v/stable.png)](https://packagist.org/packages/hadesarchitect/json-schema-bundle)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/4c96eefa-ce7a-4d29-a0c2-641a84384910/mini.png)](https://insight.sensiolabs.com/projects/4c96eefa-ce7a-4d29-a0c2-641a84384910)
 
 Symfony bundle for Justin Rainbow's JsonSchema library: https://github.com/justinrainbow/json-schema. Offers symfony services instead of classic-style $validator = new Validator();
 
