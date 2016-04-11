@@ -56,7 +56,7 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
         $errors = $this->validator->getErrors();
 
         $this->assertEquals('The property id is required', $errors[0]->getViolation());
-        $this->assertEquals('The property id is required', "{$errors[0]}");
+        $this->assertEquals('id: The property id is required', "{$errors[0]}");
 
         $invalidObject->id = 42;
 
