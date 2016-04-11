@@ -1,5 +1,5 @@
 {
-    "name": "lube/json-schema-bundle",
+    "name": "hadesarchitect/json-schema-bundle",
     "type": "symfony-bundle",
     "description": "Symfony2 bundle for Justin Rainbow's json-schema library.",
     "license": "MIT",
