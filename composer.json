@@ -1,12 +1,12 @@
 {
-    "name": "hadesarchitect/json-schema-bundle",
+    "name": "lube/json-schema-bundle",
     "type": "symfony-bundle",
     "description": "Symfony2 bundle for Justin Rainbow's json-schema library.",
     "license": "MIT",
     "authors": [
         {
-            "name": "Aleksander Volochnev",
-            "email": "a.volochnev@gmail.com"
+            "name": "Sebastian Luberriaga",
+            "email": "sebastianlube@gmail.com"
         }
     ],
     "require": {
