@@ -2,11 +2,10 @@
 
 [![Build Status](https://travis-ci.org/HadesArchitect/JsonSchemaBundle.svg?branch=master)](https://travis-ci.org/HadesArchitect/JsonSchemaBundle)
 [![Latest Stable Version](https://poser.pugx.org/hadesarchitect/json-schema-bundle/v/stable.png)](https://packagist.org/packages/hadesarchitect/json-schema-bundle)
+[![Dependency Status](https://www.versioneye.com/user/projects/574e9721e298f30048059bb6/badge.svg)](https://www.versioneye.com/user/projects/574e9721e298f30048059bb6)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/4c96eefa-ce7a-4d29-a0c2-641a84384910/mini.png)](https://insight.sensiolabs.com/projects/4c96eefa-ce7a-4d29-a0c2-641a84384910)
 
 Symfony bundle for Justin Rainbow's JsonSchema library: https://github.com/justinrainbow/json-schema. Offers symfony services instead of classic-style $validator = new Validator();
-
-**WARNING! Bundle now in development, not for use in production environment!**
 
 ```
 A PHP Implementation for validating `JSON` Structures against a given `Schema`.
@@ -19,7 +18,7 @@ Install through composer:
 
 *First step: require bundle*
 ```
-composer require hadesarchitect/json-schema-bundle dev-master
+composer require hadesarchitect/json-schema-bundle 0.*
 ```
 
 *Second step: enable bundle*
@@ -46,7 +45,7 @@ public function registerBundles()
 // Acme\DemoBundle\Controller\DemoController
 // Get the schema and data as objects
 
-$retriever = $this->get('json_schema.uri_retriever');
+$retriever = $this->get('hades.json_schema.uri_retriever');
 $schema = $retriever->retrieve('http://json-schema.org/geo'));
 ```
 #### Validate object against schema
@@ -54,10 +53,10 @@ $schema = $retriever->retrieve('http://json-schema.org/geo'));
 ```php
 // Acme\DemoBundle\Controller\DemoController
 // Obtain validator
-$validator = $this->get('json_schema.validator');
+$validator = $this->get('hades.json_schema.validator');
 
 // Get schema
-$schema = $this->get('json_schema.uri_retriever')->retrieve('http://json-schema.org/address');
+$schema = $this->get('hades.json_schema.uri_retriever')->retrieve('http://json-schema.org/address');
 
 // Prepare object
 $object = array();
@@ -103,9 +102,9 @@ if (!$result) {
 
 ### Available services
 
-* json_schema.validator
-* json_schema.uri_retriever
-* json_schema.uri_resolver
+* hades.json_schema.validator
+* hades.json_schema.uri_retriever
+* hades.json_schema.uri_resolver
 
 ### Parameters
 
