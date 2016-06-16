@@ -1,23 +1,23 @@
 parameters:
-    json_schema.validator.class: JsonSchema\Validator
-    json_schema.validator.service.class: HadesArchitect\JsonSchemaBundle\Validator\ValidatorService
+    hades.json_schema.validator.class: JsonSchema\Validator
+    hades.json_schema.validator.service.class: HadesArchitect\JsonSchemaBundle\Validator\ValidatorService
 
-    json_schema.uri_resolver.class: JsonSchema\Uri\UriResolver
-    json_schema.uri_resolver.service.class: HadesArchitect\JsonSchemaBundle\Uri\UriResolverService
+    hades.json_schema.uri_resolver.class: JsonSchema\Uri\UriResolver
+    hades.json_schema.uri_resolver.service.class: HadesArchitect\JsonSchemaBundle\Uri\UriResolverService
 
-    json_schema.uri_retriever.class: JsonSchema\Uri\UriRetriever
-    json_schema.uri_retriever.service.class: HadesArchitect\JsonSchemaBundle\Uri\UriRetrieverService
+    hades.json_schema.uri_retriever.class: JsonSchema\Uri\UriRetriever
+    hades.json_schema.uri_retriever.service.class: HadesArchitect\JsonSchemaBundle\Uri\UriRetrieverService
 
 services:
 
     hades.json_schema.validator:
-        class: %json_schema.validator.service.class%
-        arguments: [%json_schema.validator.class%]
+        class: %hades.json_schema.validator.service.class%
+        arguments: [%hades.json_schema.validator.class%]
 
     hades.json_schema.uri_resolver:
-        class: %json_schema.uri_resolver.service.class%
-        arguments: [%json_schema.uri_resolver.class%]
+        class: %hades.json_schema.uri_resolver.service.class%
+        arguments: [%hades.json_schema.uri_resolver.class%]
 
     hades.json_schema.uri_retriever:
-        class: %json_schema.uri_retriever.service.class%
-        arguments: [%json_schema.uri_retriever.class%]
+        class: %hades.json_schema.uri_retriever.service.class%
+        arguments: [%hades.json_schema.uri_retriever.class%]

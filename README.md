@@ -18,7 +18,7 @@ Install through composer:
 
 *First step: require bundle*
 ```
-composer require hadesarchitect/json-schema-bundle 0.*
+composer require hadesarchitect/json-schema-bundle ~1.0
 ```
 
 *Second step: enable bundle*
@@ -110,9 +110,9 @@ if (!$result) {
 
 Parameters which you could override in your parameters.yml:
 
-* json_schema.validator.class - *real validator class*
-* json_schema.validator.service.class - *validator service class*
-* json_schema.uri_resolver.class - *real resolver class*
-* json_schema.uri_resolver.service.class - *resolver service class*
-* json_schema.uri_retriever.class - *real retriever class*
-* json_schema.uri_retriever.service.class - *retriever service class*
+* hades.json_schema.validator.class - *real validator class*
+* hades.json_schema.validator.service.class - *validator service class*
+* hades.json_schema.uri_resolver.class - *real resolver class*
+* hades.json_schema.uri_resolver.service.class - *resolver service class*
+* hades.json_schema.uri_retriever.class - *real retriever class*
+* hades.json_schema.uri_retriever.service.class - *retriever service class*
