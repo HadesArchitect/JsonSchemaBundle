@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/HadesArchitect/JsonSchemaBundle.svg?branch=master)](https://travis-ci.org/HadesArchitect/JsonSchemaBundle)
 [![Latest Stable Version](https://poser.pugx.org/hadesarchitect/json-schema-bundle/v/stable.png)](https://packagist.org/packages/hadesarchitect/json-schema-bundle)
+[![Total Downloads](https://poser.pugx.org/hadesarchitect/json-schema-bundle/downloads)](https://packagist.org/packages/hadesarchitect/json-schema-bundle)
 [![Dependency Status](https://www.versioneye.com/user/projects/574e9721e298f30048059bb6/badge.svg)](https://www.versioneye.com/user/projects/574e9721e298f30048059bb6)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/4c96eefa-ce7a-4d29-a0c2-641a84384910/mini.png)](https://insight.sensiolabs.com/projects/4c96eefa-ce7a-4d29-a0c2-641a84384910)
 
