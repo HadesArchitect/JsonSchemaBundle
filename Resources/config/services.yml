@@ -11,13 +11,13 @@ parameters:
 services:
 
     hades.json_schema.validator:
-        class: %hades.json_schema.validator.service.class%
-        arguments: [%hades.json_schema.validator.class%]
+        class: "%hades.json_schema.validator.service.class%"
+        arguments: ["%hades.json_schema.validator.class%"]
 
     hades.json_schema.uri_resolver:
-        class: %hades.json_schema.uri_resolver.service.class%
-        arguments: [%hades.json_schema.uri_resolver.class%]
+        class: "%hades.json_schema.uri_resolver.service.class%"
+        arguments: ["%hades.json_schema.uri_resolver.class%"]
 
     hades.json_schema.uri_retriever:
-        class: %hades.json_schema.uri_retriever.service.class%
-        arguments: [%hades.json_schema.uri_retriever.class%]
+        class: "%hades.json_schema.uri_retriever.service.class%"
+        arguments: ["%hades.json_schema.uri_retriever.class%"]
